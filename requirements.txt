@@ -1,0 +1,14 @@
+beautifulsoup4==4.9.1
+certifi==2020.6.20
+chardet==3.0.4
+idna==2.10
+PyJWT==1.7.1
+pyshorteners==0.6.1
+pytz==2020.1
+requests==2.24.0
+six==1.15.0
+soupsieve==2.0.1
+twilio==6.45.2
+urllib3==1.25.10
+virtualenv==16.7.2
+wincertstore==0.2
