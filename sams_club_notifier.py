@@ -72,6 +72,7 @@ def main():
 
                     # Break out of loop
                     i=1
+                    return
 
         print('')
         # Seconds to wait (5-15 minutes)
