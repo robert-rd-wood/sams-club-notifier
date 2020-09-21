@@ -18,7 +18,7 @@ s = pyshorteners.Shortener()
 # List of URLs to be checked for stock
 URLs = shopping_list.URLs
 
-def main():
+def check_stock_status():
 
     i=0
 
@@ -91,4 +91,4 @@ def send_sms(text):
                             )
 
 if __name__ == "__main__":
-    main()
+    check_stock_status()
