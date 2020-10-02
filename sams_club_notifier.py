@@ -37,18 +37,16 @@ def check_stock_status():
 
             # Product name
             try:
-                prod_name = soup.find('div',class_="sc-product-header-title-container").text
+                prod_name_div = soup.find('div', class_='sc-pc-title-full-desktop')
+                prod_name = prod_name_div.find('h1').text
             except AttributeError:
                 print(f'*** ERROR ***\n\nProduct name div =\n{soup.find("div",class_="sc-product-header-title-container")}')
 
             # Check to see if div for "add to cart" exists
             try:
-                # Wrapper div
-                online_button_wrapper = soup.find('div', class_='sc-cart-qty-button online')
                 # Button for 'Ship this item'
-                online_button = online_button_wrapper.find('button',class_='sc-btn sc-btn-primary')
+                online_button = soup.find('button', class_='sc-btn sc-btn-primary sc-btn-block sc-pc-action-button sc-pc-add-to-cart')
             except:
-                online_button_wrapper = ''
                 online_button = ''
 
             # Double-check button text, see if there is a disabled flag
